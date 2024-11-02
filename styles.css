@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.sidebar {
+    grid-column: 1 / 2;
+    background-color: #2698D6;
+    color: white;
+    grid-row: 1 / -1;
+    gap: 50px;
+}
