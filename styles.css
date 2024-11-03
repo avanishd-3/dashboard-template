@@ -192,6 +192,7 @@ button:hover {
 .user-welcome-text h3 {
     justify-content: center;
     align-items: center;
+    padding-left: 5px;
 }
 
 .user-actions .user-buttons {
