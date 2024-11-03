@@ -40,6 +40,13 @@ button {
     width: 6em;
 }
 
+/* Buttons pop on hover */
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.15);
+}
+
 .material-symbols-outlined {
     cursor: pointer;
 }
