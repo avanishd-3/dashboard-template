@@ -280,11 +280,18 @@ button:hover {
     color: #333;
 }
 
+/* Announcements and trending styling */
+.right-sidebar {
+    display: grid;
+    grid-template-rows: 0fr 0fr;
+    grid-template-columns: 1fr;
+}
+
 /* Announcements styling */
 .announcements {
-    grid-column: 3 / span 1;
-    grid-row: 3 / span 1;
-    padding: 20px;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    padding: 0px;
 }
 
 .announcements .announcement-content {
@@ -326,8 +333,8 @@ button:hover {
 /* Trending styling */
 
 .trending {
-    grid-column: 3 / span 1;
-    grid-row: 4 / span 1;
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
     padding: 20px;
 }
 
