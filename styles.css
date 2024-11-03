@@ -96,7 +96,7 @@ button {
 .main-content {
     display: grid;
     grid-template-columns: 2fr 2fr 1fr;
-    grid-template-rows: 1fr 2fr 6fr;
+    grid-template-rows: 1fr 1fr 6fr;
 }
 
 /* Top part of header */
@@ -148,7 +148,7 @@ button {
     font-weight: 500;
 }
 
-/* User actionns part of header */
+/* User actions part of header */
 
 .user-actions {
     display: flex;
@@ -191,4 +191,92 @@ button {
     margin-left: auto;
     padding: 20px;
     width: 50%;
+}
+
+/* Main content styling */
+
+/* User timeline styling */
+.user-timeline {
+    grid-column: 1 / span 2;
+
+}
+
+.user-timeline .post-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.user-timeline .post-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 2;
+}
+
+.post-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px 20px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    position: relative;
+}
+
+/* Pop up the card on hover */
+
+.post-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.post-card .title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0 0 8px 0;
+    color: #333;
+    text-align: left;
+}
+
+.post-card .description {
+    color: #666;
+    font-size: 0.9rem;
+    text-align: left;
+    margin-bottom: auto;
+}
+
+.post-card .post-card-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.post-card .material-symbols-outlined {
+    color: #666;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+/* Bold the icons on hover */
+
+.post-card .material-symbols-outlined:hover {
+    color: #333;
+}
+
+/* Announcements and trending topics styling */
+.announcements {
+    grid-column: 3 / span 1;
+    grid-row: 3 / span 1;
+}
+
+.trending {
+    grid-column: 3 / span 1;
+    grid-row: 4 / span 1;
 }
