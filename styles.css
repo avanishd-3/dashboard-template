@@ -23,8 +23,9 @@ input {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 12px;
-    width: 80em;
-    padding-right: 100px;
+    width: 100%;
+    max-width: 80em;
+    padding-right: 20px;
     background-color: #bddff2;
     opacity: 0.3;
 }
@@ -37,7 +38,8 @@ button {
     color: white;
     font-weight: 500;
     cursor: pointer;
-    width: 7em;
+    width: 100%;
+    max-width: 7em;
 }
 
 /* Buttons pop on hover */
@@ -105,18 +107,18 @@ button:hover {
 .main-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 6fr;
+    grid-template-rows: auto auto 1fr;
 }
 
 /* Top part of header */
 
 .main-content .header {
-    grid-column: 1 / 4;
+    grid-column: 1 / -1;
     grid-row: 1 / 2;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    align-self: self-start;
     padding: 20px;
     gap: 20px;
 }
@@ -126,6 +128,8 @@ button:hover {
     align-items: center;
     gap: 10px;
     height: 50px;
+    width: 100%;
+    max-width: 1000px;
 }
 
 .search-bar input {
@@ -133,17 +137,10 @@ button:hover {
     padding: 8px;
 }
 
-.search-bar .material-symbols-outlined {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .user-profile {
     display: flex;
     align-items: center;
     gap: 10px;
-    align-self: center;
 }
 
 .user-profile img {
@@ -153,21 +150,18 @@ button:hover {
     object-fit: cover;
 }
 
-.user-profile span {
-    font-weight: 500;
-}
-
 /* User actions part of header */
 
 .user-actions {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 20px;
 
-    grid-column: 1 / 4;
+    grid-column: 1 / -1;
     grid-row: 2 / 3;
     align-self: start;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .user-actions .user-welcome {
@@ -197,9 +191,10 @@ button:hover {
 
 .user-actions .user-buttons {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
+    gap: 10px;
     margin-left: auto;
-    padding: 20px;
     width: 50%;
 }
 
@@ -208,29 +203,21 @@ button:hover {
 /* User timeline styling */
 .user-timeline {
     grid-column: 1 / span 2;
-
-}
-
-.user-timeline .post-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 20px;
+
 }
 
 .user-timeline .post-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     padding: 20px;
-    grid-column: 1 / span 2;
-    grid-row: 3 / span 2;
 }
 
 .post-card {
     background-color: white;
     border-radius: 8px;
-    padding: 30px 20px;
+    padding: 20px;
     min-height: 200px;
     display: flex;
     flex-direction: column;
