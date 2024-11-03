@@ -97,7 +97,7 @@ button {
 /* Header styling */
 .main-content {
     display: grid;
-    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 6fr;
 }
 
@@ -310,7 +310,7 @@ button {
     line-height: 1.4;
 }
 
-.announcements:hover {
+.announcement-card:hover {
     transform: translateY(-2px);
     box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.15);
 }
@@ -320,4 +320,52 @@ button {
 .trending {
     grid-column: 3 / span 1;
     grid-row: 4 / span 1;
+    padding: 20px;
+}
+
+.trending .trending-content {
+    display: grid;
+
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.trending-card {
+    padding: 10px 0;
+}
+
+.trending-card .user-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 5px;
+}
+
+.trending-card .user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.trending-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.trending-card span {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.trending-card .description {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.4;
+    padding-left: 60px;
 }
