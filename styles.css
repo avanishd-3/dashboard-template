@@ -11,6 +11,8 @@ body {
     display: grid;
     grid-template-columns: 2fr 10fr;
     gap: 25px;
+
+    background-color: #e6f4fc;
 }
 
 ul {
@@ -23,7 +25,7 @@ input {
     border-radius: 12px;
     width: 1000px;
     padding-right: 100px;
-    background-color: #76BDE3;
+    background-color: #bddff2;
     opacity: 0.3;
 }
 
@@ -270,11 +272,50 @@ button {
     color: #333;
 }
 
-/* Announcements and trending topics styling */
+/* Announcements styling */
 .announcements {
     grid-column: 3 / span 1;
     grid-row: 3 / span 1;
+    padding: 20px;
 }
+
+.announcements .announcement-content {
+    display: grid;
+
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.announcement-card {
+    padding: 15px 0;
+}
+
+.announcement-card:not(:last-child) {
+    border-bottom: 3px solid #e0e0e0;
+}
+
+.announcement-card .title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.announcement-card .description {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.announcements:hover {
+    transform: translateY(-2px);
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Trending styling */
 
 .trending {
     grid-column: 3 / span 1;
